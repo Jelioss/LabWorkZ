@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Задание 2</title>
+    <style>
+        h1 {
+            color: rebeccapurple
+        }
+    </style>
+</head>
+<script>
+    const a = 10
+    const b = 5
+    const c = "10"
+    const d = "5"
+    function vir1() {
+     const z1 = a + b
+     alert('Результатом сложения 10 и 5 будет: ' + z1)
+    }
+    function vir2() {
+     const z2 = c + d
+     alert('Результатом сложения "10" и "5" будет: ' + z2)
+    }
+    function vir3() {
+     const z3 = a + d
+     alert('Результатом сложения 10 и "5" будет: ' + z3)
+    }
+    function vir4() {
+     const z4 = c + b
+     alert('Результатом сложения "10" и 5 будет: ' + z4)
+    }
+    function vir5() {
+     alert('Результатом сложения строки и числа всегда будет строка')
+    }
+</script>
+<body>
+    <h1>Задание 2</h1>
+    <input type='button' value='10 + 5' onclick='vir1()' />
+    <input type='button' value='"10" + "5"' onclick='vir2()' />
+    <input type='button' value='10 + "5"' onclick='vir3()' />
+    <input type='button' value='"10" + 5' onclick='vir4()' />
+    <input type='button' value='Вывод' onclick='vir5()' />
+</body>
+</html>

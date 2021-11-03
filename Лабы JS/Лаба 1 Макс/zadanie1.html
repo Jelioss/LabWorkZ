@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+    <style>
+        h1 {
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+<script>
+    function arc1() {
+        alert('Вас приветствует учебный центр');
+    }
+    function arc2() {
+        x = prompt('Введите имя: ', 'Имя');
+        alert('Добро пожаловать на курсы, ' + x);
+    }
+    function arc3() {
+        y = confirm('Хотите стать Web-дизайнером?');
+        if (y == true)
+            alert('Учтите стили CSS и JavaScript!');
+        else
+            alert('Упускаете время!');
+    }
+</script>
+
+<body>
+    <h1>Задание 1</h1>
+    <input type='button' value='Окно оповещения' onclick='arc1()' />
+    <input type='button' value='Окно запроса' onclick='arc2()' />
+    <input type='button' value='Окно подтверждения' onclick='arc3()' />
+</body>
+
+</html>

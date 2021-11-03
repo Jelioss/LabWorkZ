@@ -1,0 +1,27 @@
+#include <iostream>
+
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    
+setlocale(LC_CTYPE, "Russian");
+    
+double y, z, b = 2.5, m = 3, a = 1.4 * pow(10, -3), j = b;
+    
+while (j < 3.1) {
+        
+y = (m * j) / tan(j + exp(10 - m));
+        
+z = 2 * y * b + sqrt(abs(a) + abs(b));
+        
+cout << "y=" << y << "\n";
+        
+cout << "z=" << z << endl;
+        
+j += 0.1;
+    
+}
+
+}

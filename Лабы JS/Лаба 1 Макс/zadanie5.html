@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Задание 5</title>
+        <style>
+            h1 {
+                color: rebeccapurple
+            }
+        </style>
+    </head>
+    <script>
+        function comparice() {
+            a = prompt('Введите первое число ', 'Первое число')
+            b = prompt('Введите второе число ', 'Второе число')
+            a = parseInt(a)
+            b = parseInt(b)
+            let result = (a > b) ? alert('Число ' + a + ' больше числа ' + b) :
+            (a == b) ? alert('Число ' + a + ' равняется числу ' + b) :
+            (a < b) ? alert('Число ' + a + ' меньше числа ' + b) :
+            alert(result)
+        }
+    </script>
+    <body>
+        <h1>Задание 5</h1>
+        <input type='button' value='Сравнение двух чисел' onclick='comparice()' />
+    </body>
+</html>

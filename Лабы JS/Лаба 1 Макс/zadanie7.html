@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 7</title>
+    <style>
+        h1 {
+            color: rebeccapurple
+        }
+    </style>
+</head>
+<body>
+    <h1>Задание 7</h1>
+    <script>
+        function test() {
+            try {
+         alert('Тест запущен');  // Сработает
+         drcrobora; // Ошибка
+         alert('Тест завершен'); // Не сработает 
+        } 
+        catch(warning) {
+         alert('Ошибка ' + warning.name + ' : ' + warning.message); // Сработает 
+        }
+        alert("Закрытие теста"); // Сработает
+        }
+    </script>
+    <input type='button' value='Тестирование программы' onclick='test()' />
+</body>
+</html>
