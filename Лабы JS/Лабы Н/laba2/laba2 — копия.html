@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Лабораторная работа 2 </title>
+	<style type="text/css">
+		table {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		tr, td {
+			border: 1px solid black;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<p> <button onclick="Task1()"> Задание 2 </button>
+<button onclick="Task2()"> Задание 3 </button>
+<button onclick="Task3()"> Задание 4 </button> </p>
+<script>
+	function Task1() {
+		let a = +prompt("Введите число a");
+		let b = +prompt("Введите число b");
+		let body = document.querySelector("body"),
+			width = 64 * b,
+			height = 24 * a;
+		table = document.createElement("table");
+		table.setAttribute("width", width);
+		table.setAttribute("height", height);
+			for (let row = 1; row <= a; row++) {
+				tr = document.createElement("tr");
+				for (let collumn = 1; collumn <= b; collumn++) {
+					td = document.createElement("td");
+					td.setAttribute("width", "64");
+					text = document.createTextNode(row * collumn);
+					td.appendChild(text);
+					tr.appendChild(td);
+				}
+				table.appendChild(tr);
+			}
+		return body.appendChild(table);
+	}
+	function Task2() {
+		let a = 0.3;
+		let b = 3;
+		let body = document.querySelector("body"),
+			height = 24 * a;
+		table = document.createElement("table");
+		table.setAttribute("width", "384");
+		table.setAttribute("height", height);
+		trFirst = document.createElement("tr");
+		tdRad = document.createElement("td");
+		tdRad.setAttribute("width", "64");
+		Rad = document.createTextNode("Радиус");
+		tdRad.appendChild(Rad);
+		trFirst.appendChild(tdRad);
+		tdArea = document.createElement("td");
+		tdArea.setAttribute("width", "128");
+		Area = document.createTextNode("Площадь круга");
+		tdArea.appendChild(Area);
+		trFirst.appendChild(tdArea);
+		tdLength = document.createElement("td");
+		tdLength.setAttribute("width", "128");
+		Length = document.createTextNode("Длина окружности");
+		tdLength.appendChild(Length);
+		trFirst.appendChild(tdLength);
+		table.appendChild(trFirst);
+		let countRows = a;
+		do {
+			tr = document.createElement("tr");
+			tdRadCount = document.createElement("td");
+			tdRadCount.setAttribute("width", "64");
+			RadCount = document.createTextNode(countRows.toFixed(1));
+			tdRadCount.appendChild(RadCount);
+			tr.appendChild(tdRadCount);
+			tdAreaCount = document.createElement("td");
+			tdAreaCount.setAttribute("width", "128");
+			AreaCount = document.createTextNode(Math.round(Math.PI * Math.pow(countRows, 2)));
+			tdAreaCount.appendChild(AreaCount);
+			tr.appendChild(tdAreaCount);
+			tdLengthCount = document.createElement("td");
+			tdLengthCount.setAttribute("width", "128");
+			LengthCount = document.createTextNode(Math.round(2 * Math.PI * countRows));
+			tdLengthCount.appendChild(LengthCount);
+			tr.appendChild(tdLengthCount);
+			table.appendChild(tr);
+			countRows = countRows + 0.3;
+		} while (countRows <= b);
+		return body.appendChild(table);
+	}
+		function Task3() {
+		let a = new Number(7.55);
+		let b = new Number(12);
+		let body = document.querySelector("body"),
+		table = document.createElement("table");
+		table.setAttribute("width", "544");
+		table.setAttribute("height", "600");
+		trFirst = document.createElement("tr");
+		trFirst.setAttribute("height", "24")
+		tdNumber = document.createElement("td");
+		tdNumber.setAttribute("width", "96");
+		tdNumber.setAttribute("width", "96");
+		Count = document.createTextNode("Число");
+		tdNumber.appendChild(Count);
+		trFirst.appendChild(tdNumber);
+		tdMethod = document.createElement("td");
+		tdMethod.setAttribute("width", "96");
+		Method = document.createTextNode("Метод");
+		tdMethod.appendChild(Method);
+		trFirst.appendChild(tdMethod);
+		tdResult = document.createElement("td");
+		tdResult.setAttribute("width", "96");
+		Result = document.createTextNode("Результат");
+		tdResult.appendChild(Result);
+		trFirst.appendChild(tdResult);
+		tdDescription = document.createElement("td");
+		tdDescription.setAttribute("width", "256");
+		Description = document.createTextNode("Описание метода");
+		tdDescription.appendChild(Description);
+		trFirst.appendChild(tdDescription);
+		table.appendChild(trFirst);
+		let c = a;
+		let d = b;
+		for (let e = 1; e <= 2; e++) {
+			for (let f = 1; f <= 4; f++) {
+				switch(f) {
+					case 1:
+					MethodCount = document.createTextNode("toExponential(2)");
+					ResultCount = document.createTextNode(c.toExponential(2));
+					DescriptionCount = document.createTextNode("представляет число в экспоненциальной форме, параметр количество – целое число, определяющее, сколько цифр после точки следует указывать.");
+					break;
+					case 2:
+					MethodCount = document.createTextNode("toFixed(2)");
+					ResultCount = document.createTextNode(c.toFixed(2));
+					DescriptionCount = document.createTextNode("представляет число в форме с фиксированным количеством цифр после точки, параметр количество – целое число, определяющее, сколько цифр после точки следует указывать.");
+					break;
+					case 3:
+					MethodCount = document.createTextNode("toPrecision(2)");
+					ResultCount = document.createTextNode(c.toPrecision(2));
+					DescriptionCount = document.createTextNode("представляет число с заданным общим количеством значащих цифр. Параметр точность – целое число, определяющее, сколько всего цифр, до и после точки, следует указывать.");
+					break;
+					case 4:
+					MethodCount = document.createTextNode("toString(16)");
+					ResultCount = document.createTextNode(c.toString(16));
+					DescriptionCount = document.createTextNode("– возвращает строковое представление числа в системе счисления с указанным основанием. Если параметр не указан,  имеется в виду десятеричная система счисления. Этот метод имеют все объекты.");
+					break;
+				}
+				tr = document.createElement("tr");
+				tr.setAttribute("height", "72");
+				tdNumberCount = document.createElement("td");
+				tdNumberCount.setAttribute("width", "96");
+				CountCount = document.createTextNode(c);
+				tdNumberCount.appendChild(CountCount);
+				tr.appendChild(tdNumberCount);
+				tdMethodCount = document.createElement("td");
+				tdMethodCount.setAttribute("width", "96");
+				tdMethodCount.appendChild(MethodCount);
+				tr.appendChild(tdMethodCount);
+				tdResultCount = document.createElement("td");
+				tdResultCount.setAttribute("width", "96");
+				tdResultCount.appendChild(ResultCount);
+				tr.appendChild(tdResultCount);
+				tdDescriptionCount = document.createElement("td");
+				tdDescriptionCount.setAttribute("width", "256");
+				tdDescriptionCount.appendChild(DescriptionCount);
+				tr.appendChild(tdDescriptionCount);
+				table.appendChild(tr);
+			}
+			c = d;
+		}
+		return body.appendChild(table);
+	}
+</script>
+</body>
+</html>

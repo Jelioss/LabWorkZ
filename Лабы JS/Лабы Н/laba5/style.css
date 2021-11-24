@@ -1,0 +1,31 @@
+h1 + p {
+	background: yellow;
+}
+h2 ~ p {
+	color: blue;
+}
+h1, h2 {
+	text-align: center;
+}
+span {
+	color      : red;
+	font-weight: bold;
+}
+table {
+	text-align     : center;
+	border         : 2px solid black;
+	border-collapse: collapse;
+	margin         : auto;
+}
+td, th {
+	border: 1px solid black;
+	width : 64px;
+}
+td:first-child {
+	text-align: left;
+	width     : 128px;
+}
+div {
+	margin    : 10px;
+	text-align: center;
+}

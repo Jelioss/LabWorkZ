@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Лабораторная работа 1 </title>
+	<style type="text/css">
+		html {
+			font-family: Trebuchet MS;
+			font-size: 110%;
+		}
+	</style>
+</head>
+<body>
+	<script type='text/javascript'>
+	function func1() {
+		alert('Вас приветствует учебный центр');
+		var a = prompt('Введите имя', 'Имя');
+		alert('Добро пожаловать на наши курсы, '+ a);
+		var b = confirm('Хотите стать Web-дизайнером?');
+		if (b == true) 
+			{ alert('Учите стили CSS и JavaScript!'); }
+		else
+			{ alert('Упускаете время!'); }
+	}
+	function func21() {
+		document.write('5 + 10 = ' + (5+10)); }
+	function func22() {
+		document.write('"5" + "10" = ' + ('5'+'10')); }
+	function func23() {
+		document.write('22 + "5" = ' + (22+'5')); }
+	function func24() {
+		document.write('"22" + 5 = ' + ('22'+5)); }
+	function func25() {
+		alert('Результатом сложения строки и числа всегда будет число и строка вместе, а не их арифметическая сумма.');
+	}
+	function func3() {
+		var x = 25;
+		var y = 8;
+		var c = 85*x+10*y-12;
+		var d = 5*x-5*y;
+		alert('85*x+10*y-12=' + c + '; 5*x-5*y=' + d + '; (85*x+10*y-12)/(5*x-5*y)=' + (c/d) + '; Остаток c/d=' + (c%d));
+		document.write('85*x+10*y-12=' + c + '; 5*x-5*y=' + d + '; (85*x+10*y-12)/(5*x-5*y)=' + (c/d) + '; Остаток c/d=' + (c%d));
+	}
+	function func41() {
+		var e = prompt('Введите число');
+		if ((e < 20 || e > 40) &&  e != 15 && 0 == e%5)
+			{ alert('Верно'); }
+		else
+			{ alert('Неверно'); }
+	}
+	function func42() {
+		var p = prompt('Введите год рождения');
+		if (p <= 2005 && p >= 2003)
+			{ alert('Добро пожаловать'); }
+		else 
+			{ alert('Извините, вы нам не подходите'); }
+	}
+	function func51() {
+		var f = +prompt('Введите число 1');
+		var g = +prompt('Введите число 2');
+		if (f > g) 
+			{ alert('Число 1 больше числа 2'); }
+		else
+			{ alert('Число 2 больше числа 1'); }
+	}
+	function func52() {
+		var l = prompt('Введите число');
+		if ((l%4) == 0) 
+			{ alert('Число делится на 4'); }
+		else if ((l%2) == 0)
+			{ alert('Число делится на 2'); }
+		else
+			{ alert('Число не делится ни на 4, ни на 2'); }
+	}
+	function func6() {
+		var date = new Date();
+		var day = date.getDay();
+		switch(day) {
+			case 0:
+				alert('Сегодня воскресенье');
+				break;
+			case 1:
+				alert('Сегодня понедельник');
+				break;
+			case 2:
+				alert('Сегодня вторник');
+				break;
+			case 3:
+				alert('Сегодня среда');
+				break;
+			case 4:
+				alert('Сегодня четверг');
+				break;
+			case 5:
+				alert('Сегодня пятница');
+				break;
+			case 6:
+				alert('Сегодня суббота');
+				break; }
+	}
+	function func7() {
+		var m = 0;
+		try {
+			m = 0/s;}
+		catch(error) {
+			alert('Ошибочка вышла'); }
+	}
+	</script>
+	Задание 1:
+	<input type='button' value='диалог' onclick='func1()' />
+	<p> Задание 2:
+	<input type='button' value='5 + 10' onclick='func21()' />
+	<input type='button' value='"5" + "10"' onclick='func22()' />
+	<input type='button' value='22 + "5"' onclick='func23()' />
+	<input type='button' value='"22" + 5' onclick='func24()' />
+	<input type='button' value='вывод' onclick='func25()' /> </p>
+	<p> Задание 3:
+	<input type='button' value='остаток' onclick='func3()' /> </p>
+	<p> Задание 4:
+	<input type='button' value='определение верности/неверности числа' onclick='func41()' />
+	<input type='button' value='год рождения' onclick='func42()' /> </p>
+	<p> Задание 5:
+	<input type='button' value='сравнение чисел' onclick='func51()' />
+	<input type='button' value='делимость на 4' onclick='func52()' /> </p>
+	<p> Задание 6:
+	<input type='button' value='день недели' onclick='func6()' /> </p>
+	<p> Задание 7:
+	<input type='button' value='конструкция try...catch' onclick='func7()' /> </p>
+</body>
+</html>
